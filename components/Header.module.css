@@ -37,10 +37,20 @@
   font-weight: 500;
   transition: color 0.2s ease;
   position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.link:hover {
+.link:hover:not(:disabled) {
   color: #0066cc;
+}
+
+.link:disabled {
+  cursor: default;
+  opacity: 0.7;
 }
 
 .link::after {
