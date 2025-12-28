@@ -21,11 +21,11 @@ const hobbyDetails: Record<string, {
     longDescription: 'Hobbyist film photography enthusiast. Passionate about capturing moments through analog photography, exploring the unique aesthetic and process of film development.'
   },
   'hobby-2': {
-    title: 'Hobby/Activity Title 2',
-    techStack: ['Skill1', 'Skill2', 'Skill3'],
-    image: 'https://via.placeholder.com/1200x600/0066cc/ffffff?text=Hobby+2',
-    description: 'Short description',
-    longDescription: 'This is a detailed description of Hobby/Activity 2. You can add more information about the hobby or extra-curricular activity here, including what you do, why you enjoy it, and any achievements or skills gained.'
+    title: 'Women in Engineering - VP of Mentorship',
+    techStack: ['Leadership', 'Mentorship', 'Event Planning', 'Community Building'],
+    image: '/WiE.jpg',
+    description: 'Vice President of Mentorship at Western University Women in Engineering',
+    longDescription: 'Served as Vice President of Mentorship for Western University\'s Women in Engineering club from April 2022 to April 2023. Led the "Big Sister Little Sister" mentorship program, pairing 150 first-year female students with upper-year mentors to create a supportive community for academic and personal growth. Enhanced the program by introducing comprehensive compatibility surveys that improved mentor-mentee pairings and increased retention rates. Successfully increased Kick-Off event attendance by 43% through strategic email and social media promotion. Learn more at https://news.westernu.ca/2023/03/meet-the-changemakers-of-westerns-women-in-engineering-club%E2%80%AF/'
   },
   'hobby-3': {
     title: 'Hobby/Activity Title 3',
