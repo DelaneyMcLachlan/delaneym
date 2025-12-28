@@ -8,11 +8,12 @@ interface ProjectCardProps {
   techStack: string[]
   image: string
   imageAlt?: string
+  basePath?: string
 }
 
-export default function ProjectCard({ id, title, techStack, image, imageAlt }: ProjectCardProps) {
+export default function ProjectCard({ id, title, techStack, image, imageAlt, basePath = '/projects' }: ProjectCardProps) {
   return (
-    <Link href={`/projects/${id}`} className={styles.card}>
+    <Link href={`${basePath}/${id}`} className={styles.card}>
       <div className={styles.imageContainer}>
         <Image
           src={image}
