@@ -14,10 +14,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'project-1',
-    title: 'Project Title 1',
-    techStack: ['Tech1', 'Tech2', 'Tech3'],
-    image: 'https://via.placeholder.com/600x400/0066cc/ffffff?text=Project+1',
-    imageAlt: 'Project 1'
+    title: '7ft LED Wizard Staff',
+    techStack: ['CircuitPython', 'Adafruit Feather M4 Express Microcontroller', 'NeoPixel RGB LEDs', 'Electronics Assembly', 'Soldering'],
+    image: '/wizard-staff.png',
+    imageAlt: 'LED Wizard Staff - Cosplay Staff with Lights'
   },
   {
     id: 'project-2',

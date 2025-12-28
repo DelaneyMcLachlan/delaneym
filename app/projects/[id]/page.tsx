@@ -16,11 +16,11 @@ const projectDetails: Record<string, {
   longDescription: string
 }> = {
   'project-1': {
-    title: 'Project Title 1',
-    techStack: ['Tech1', 'Tech2', 'Tech3'],
-    image: 'https://via.placeholder.com/1200x600/0066cc/ffffff?text=Project+1',
-    description: 'Short description',
-    longDescription: 'This is a detailed description of Project 1.'
+    title: '7ft LED Wizard Staff',
+    techStack: ['CircuitPython', 'Adafruit Feather M4 Express Microcontroller', 'NeoPixel RGB LEDs', 'Soldering', 'Electronics Assembly'],
+    image: '/wizard-staff.png',
+    description: 'Cosplay Staff with Lights Effects',
+    longDescription: 'A glowing staff for a Wizard costume. This prop features lighting effects using NeoPixel strips and rings, controlled by an Adafruit Feather M4 Express microcontroller running CircuitPython. The Adafruit Feather M4 Express is a powerful microcontroller board featuring an ATSAMD51 chip, perfect for running complex lighting animations. NeoPixels are individually addressable RGB LEDs that allow for precise color control and dynamic lighting patterns. Built following the Adafruit guide (https://learn.adafruit.com/burning-fire-wizard-staff ), this project demonstrates skills in embedded systems programming and creative electronics.'
   },
   'project-2': {
     title: 'Project Title 2',
@@ -86,7 +86,10 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
             </div>
 
             <div className={styles.description}>
-              <p>{project.longDescription}</p>
+              <p dangerouslySetInnerHTML={{ __html: project.longDescription.replace(
+                /(https?:\/\/[^\s]+)/g,
+                '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: underline;">$1</a>'
+              ) }} />
             </div>
           </div>
         </div>
