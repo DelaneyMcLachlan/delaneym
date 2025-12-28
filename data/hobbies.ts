@@ -21,17 +21,17 @@ export const hobbies: Hobby[] = [
   },
   {
     id: 'hobby-2',
-    title: 'Women in Engineering - VP of Mentorship',
+    title: 'UWO Women in Engineering - VP of Mentorship',
     techStack: ['Leadership', 'Mentorship', 'Event Planning', 'Community Building'],
     image: '/WiE.jpg',
     imageAlt: 'Western University Women in Engineering - Vice President of Mentorship'
   },
   {
     id: 'hobby-3',
-    title: 'Hobby/Activity Title 3',
-    techStack: ['Skill1', 'Skill2', 'Skill3'],
-    image: 'https://via.placeholder.com/600x400/0066cc/ffffff?text=Hobby+3',
-    imageAlt: 'Hobby 3'
+    title: 'UWO Engineering First-Year Orientation Week Leader',
+    techStack: ['Mentorship', 'Event Planning', 'Student Support', 'Community Building'],
+    image: '/oweek.png',
+    imageAlt: 'UWO Engineering First Year Orientation Week Leader'
   },
 ]
 
