@@ -21,10 +21,10 @@ export const projects: Project[] = [
   },
   {
     id: 'project-2',
-    title: 'Project Title 2',
-    techStack: ['Tech1', 'Tech2', 'Tech3'],
-    image: 'https://via.placeholder.com/600x400/0066cc/ffffff?text=Project+2',
-    imageAlt: 'Project 2'
+    title: 'New Grad SWE Job Board Scraper',
+    techStack: ['Python', 'SQLite Database', 'Web Scraping', 'SMTP Email', 'REST APIs', 'Modular Architecture', 'Automation'],
+    image: '/job-board-scraper.png',
+    imageAlt: 'Job Board Scraper - Multi-board web scraper with email notifications'
   },
   {
     id: 'project-3',
