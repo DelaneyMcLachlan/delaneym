@@ -32,7 +32,7 @@ const projectDetails: Record<string, {
   'project-3': {
     title: 'Personal Portfolio Website',
     techStack: ['Next.js 14', 'React', 'TypeScript', 'CSS Modules', 'Next.js App Router', 'Responsive Design'],
-    image: 'https://via.placeholder.com/1200x600/0066cc/ffffff?text=Portfolio+Website',
+    image: 'text:DM',
     description: 'Modern portfolio website showcasing projects and experience',
     longDescription: 'A modern, responsive portfolio website built with Next.js 14 and React, showcasing software engineering projects and professional experience. The site features a clean, minimalist design with a sticky header containing social links, a dynamic project showcase with interactive cards, and a footer section for work experience. Built using Next.js App Router for optimal performance and SEO, the portfolio includes dynamic routing for individual project detail pages, client-side link obfuscation for privacy, and fully responsive CSS Modules for styling. The project demonstrates skills in modern web development, component architecture, TypeScript for type safety, and responsive design principles. The modular structure makes it easy to add new projects and customize content. View the project at https://github.com/DelaneyMcLachlan/dm_new_grad_portfolio.'
   },
@@ -65,13 +65,19 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
           <Link href="/" className={styles.backLink}>← Back to Projects</Link>
           
           <div className={styles.imageContainer}>
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className={styles.image}
-              sizes="100vw"
-            />
+            {project.image.startsWith('text:') ? (
+              <div className={styles.textImage}>
+                {project.image.replace('text:', '')}
+              </div>
+            ) : (
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className={styles.image}
+                sizes="100vw"
+              />
+            )}
           </div>
 
           <div className={styles.content}>

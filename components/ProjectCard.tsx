@@ -12,16 +12,25 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ id, title, techStack, image, imageAlt, basePath = '/projects' }: ProjectCardProps) {
+  const isTextImage = image.startsWith('text:')
+  const textContent = isTextImage ? image.replace('text:', '') : null
+
   return (
     <Link href={`${basePath}/${id}`} className={styles.card}>
       <div className={styles.imageContainer}>
-        <Image
-          src={image}
-          alt={imageAlt || title}
-          fill
-          className={styles.image}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+        {isTextImage ? (
+          <div className={styles.textImage}>
+            {textContent}
+          </div>
+        ) : (
+          <Image
+            src={image}
+            alt={imageAlt || title}
+            fill
+            className={styles.image}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        )}
       </div>
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>
