@@ -3,12 +3,14 @@
 const BASE_PATH = '/delaneym'
 
 export function getImagePath(path: string): string {
-  // For static export to GitHub Pages, always prepend basePath
-  // This ensures images work correctly on GitHub Pages
-  // In local development, Next.js dev server handles this automatically
+  // Don't modify text-based images
   if (path.startsWith('text:')) {
-    return path // Don't modify text-based images
+    return path
   }
+  
+  // For static export, we always need to prepend basePath
+  // because the HTML is generated at build time
+  // Next.js config handles basePath for routing, but not for Image src in static export
   return `${BASE_PATH}${path}`
 }
 
