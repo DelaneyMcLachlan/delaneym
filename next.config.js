@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -9,6 +11,8 @@ const nextConfig = {
       },
     ],
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/delaneym' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/delaneym' : '',
 }
 
 module.exports = nextConfig
