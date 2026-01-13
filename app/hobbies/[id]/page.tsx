@@ -36,6 +36,15 @@ const hobbyDetails: Record<string, {
   },
 }
 
+// Generate static params for all hobbies
+export async function generateStaticParams() {
+  return [
+    { id: 'hobby-1' },
+    { id: 'hobby-2' },
+    { id: 'hobby-3' },
+  ]
+}
+
 export default async function HobbyDetail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const hobby = hobbyDetails[id]
